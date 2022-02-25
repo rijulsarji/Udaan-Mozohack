@@ -13,7 +13,6 @@ import landingPage from "../assets/landingPage.aac";
 import AboutUdaan from "../Components/aboutUdaan";
 import AboutJobs from "../Components/aboutJobs";
 import AboutScholar from "../Components/aboutScholar";
-import Heroes from "../Components/heroes";
 import NGOsection from "../Components/ngoSection";
 import Footer from "../Components/footer";
 
@@ -30,7 +29,7 @@ function Home() {
     else setBlind(false);
   }, [sessVar]);
 
-  const {ref, inView } = useInView();
+  const {ref, inView } = useInView({initialInView: true});
 
   const [play, setPlay] = useState(false)
 
@@ -90,9 +89,6 @@ function Home() {
 
       {/* about scholarships */}
       <AboutScholar />
-
-      {/* heroes */}
-      <Heroes />
 
       {/* NGO section */}
       <NGOsection />

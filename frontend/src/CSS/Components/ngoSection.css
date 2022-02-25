@@ -1,0 +1,35 @@
+.projectCardHolder {
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+} 
+.ngoSubBody h2 {
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #FDD832;
+    font-size: 44px;
+    margin: 0px;
+}
+.ngoSubBody h6 {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .ngoSubBody h2 {
+        font-size: 32px;
+    }
+    .ngoSubBody h6 {
+        font-size: 18px;
+    }
+    .projectCardHolder h1 {
+        font-size: 24px;
+    }
+    .projectCardHolder p {
+        font-size: 12px;
+    }
+}
