@@ -5,8 +5,6 @@ import landingGif from "../assets/landingVideo.gif";
 
 import { useInView } from "react-intersection-observer";
 
-import {Howl, Howler} from "howler";
-
 import ReactHowler from "react-howler";
 
 import landingPage from "../assets/landingPage.aac";
@@ -21,16 +19,28 @@ import Footer from "../Components/footer";
 
 function Home() {
 
+  const [sessVar, setSessVar] = useState(false);
+  const [blind, setBlind] = useState(false);
+  setInterval(() => {
+    setSessVar(window.sessionStorage.getItem("blind"));
+  }, 1000);
+
+  useEffect(() => {
+    if (sessVar === "true") setBlind(true);
+    else setBlind(false);
+  }, [sessVar]);
+
   const {ref, inView } = useInView();
 
   const [play, setPlay] = useState(false)
 
   useEffect(() => {
-    if(inView)
+    if(inView && blind)
       setPlay(true)
     else
       setPlay(false)
   }, [inView])
+
 
   // const sound = new Howl ({
   //   src: landingPage

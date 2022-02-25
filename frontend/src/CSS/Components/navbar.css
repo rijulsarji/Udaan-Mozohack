@@ -1,0 +1,63 @@
+.navbarBody {
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    z-index: 10
+}
+.navbarUdaanLogo {
+    width: 13%;
+    position: absolute;
+    left: 10%;
+}
+
+.rightNavbarSide {
+    width: 35%;
+    margin-right: 5%;
+}
+.navbarLinkContainer {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+}
+.navbarLinks {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.15s linear;
+}
+.navbarLinks:hover {
+    color: #FDD832;
+}
+.active {
+    color: #FDD832;
+}
+
+@media screen and (max-width: 480px) {
+    .navbarBody {
+        height: 40px;
+    }
+    .navbarUdaanLogo {
+        width: 80px;
+        left: 1%;
+    }
+    .rightNavbarSide {
+        margin-right: 0px;
+        width: 75%;
+    }
+    .navbarLinkContainer {
+        margin-right: 5px;
+    }
+    .navbarLinks {
+        margin-top: 15px;
+        font-size: 11px;
+    }
+}
