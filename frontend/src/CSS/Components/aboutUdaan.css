@@ -1,0 +1,54 @@
+.aboutUdaanBody {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.aboutUdaanSubBody {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+.aboutUdaanSubBody img {
+    width: 650px;
+    margin-left: 50px;
+}
+.aboutUdaanSubBody p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    margin-right: 50px;
+    font-weight: 500;
+}
+.aboutUdaanSubBody span {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 32px;
+    color: #FDD832;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 480px) {
+    .aboutUdaanSubBody {
+        padding-top: 40px; 
+        flex-direction: column;
+        gap: 50px;
+    }
+    .aboutUdaanSubBody img {
+        width: 350px;
+        margin-left: 0px;
+    }
+    .aboutUdaanSubBody span {
+        font-size: 28px;
+    }
+    .aboutUdaanBody p {
+        font-size: 18px;
+        margin-right: 0px;
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 30px;
+    }
+}

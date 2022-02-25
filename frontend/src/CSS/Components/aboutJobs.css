@@ -1,0 +1,131 @@
+.aboutJobsBody {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.aboutJobsSubBody {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+.aboutJobsLS {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutJobsLS h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #FDD832;
+    font-size: 44px;
+}
+.aboutJobsLS p {
+    margin-top: 0px;
+    width: 70%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.aboutJobsDive {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    color: black;
+    text-decoration: none;
+    background-color: #FDD832;
+    padding: 15px;
+    border-radius: 50px;
+    gap: 5px;
+}
+.aboutJobsDive p{
+    font-size: 18px;
+    margin: 0px;
+    width: fit-content;
+}
+
+/* right side */
+.aboutJobsRS {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%; 
+}
+.aboutJobsBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    font-family: 'Rubik', sans-serif;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px #FDD832;
+    background-color: white;
+}
+.aboutJobsBox img {
+    width: 250px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.aboutJobsBox h1 {
+    font-size: 22px;
+}
+.aboutJobsBox p {
+    font-size: 14px;
+    width: 85%;
+}
+
+@media screen and (max-width: 480px) {
+    .aboutJobsSubBody {
+        padding-top: 40px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        padding-bottom: 30px;
+    }
+    .aboutJobsLS {
+        width: 80%;
+    }
+    .aboutJobsLS h1 {
+        font-size: 32px;
+    }
+    .aboutJobsLS p {
+        font-size: 18px;
+        line-height: 30px;
+        width: 100%;
+    }
+    .aboutJobsDive {
+        width: 80px;
+        border-radius: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .aboutJobsDive p {
+        font-size: 16px;
+    }
+
+    .aboutJobsRS {
+        width: 90%;
+    }
+    .aboutJobsBox {
+        width: 150px;
+        box-shadow: 4px 4px 12px #FDD832;
+    }
+    .aboutJobsBox img {
+        width: 150px;
+    }
+    .aboutJobsBox h1 {
+        font-size: 20px;
+    }
+    .aboutJobsBox p {
+        font-size: 12px;
+    }
+}

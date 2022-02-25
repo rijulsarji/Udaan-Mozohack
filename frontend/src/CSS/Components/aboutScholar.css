@@ -1,0 +1,126 @@
+.aboutScholarBody {
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+}
+.aboutScholarSubBody {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutScholarLS {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    margin-left: 20px;
+}
+
+.aboutScholarBox {
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 6px #fdd832;
+    padding-bottom: 60px;
+    border-radius: 20px 20px 100% 100%;
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+}
+.aboutScholarCap {
+    width: 100px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+}
+.aboutScholarImg {
+    height: 160px;
+    margin-top: 30px;
+}
+.aboutScholarBox h1 {
+    font-size: 22px;
+}
+.aboutScholarBox p {
+    font-size: 14px;
+    width: 85%;
+}
+
+.aboutScholarRS {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.aboutScholarRS h1 {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #FDD832;
+    font-size: 44px;
+}
+.aboutScholarRS p {
+    margin-top: 0px;
+    width: 70%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.aboutScholarGrab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    color: black;
+    text-decoration: none;
+    background-color: #FDD832;
+    padding: 15px;
+    border-radius: 50px;
+    gap: 5px;
+}
+.aboutScholarGrab p {
+    font-size: 18px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 480px) {
+    .aboutScholarSubBody {
+        flex-direction: column-reverse;
+        gap: 50px;
+        padding-bottom: 50px;
+    }
+    .aboutScholarRS {
+        width: 100%;
+    }
+    .aboutScholarRS h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+    .aboutScholarRS p {
+        width: 80%;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .aboutScholarLS {
+        width: 90%;
+        margin-left: 0px; 
+    }
+    .aboutScholarBox {
+        width: 200px;
+        box-shadow: 4px 4px 12px #FDD832;
+        padding-bottom: 60px;
+        border-radius: 20px;
+    }
+    .aboutScholarBox img {
+        width: 60px;
+        top: -20px;
+        left: -20px;
+    }
+}
