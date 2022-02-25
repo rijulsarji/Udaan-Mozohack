@@ -12,44 +12,81 @@ import { useEffect, useState } from "react";
 
 function App() {
 
+  const [sessVar, setSessVar] = useState(false);
+  const [blind, setBlind] = useState(false);
+  setInterval(() => {
+    setSessVar(window.sessionStorage.getItem("blind"));
+  }, 1000);
+
+  useEffect(() => {
+    if (sessVar === "true") setBlind(true);
+    else setBlind(false);
+  }, [sessVar]);
+
   const [load, setLoad] = useState(true);
-  fetch("https://project-udaan.herokuapp.com/api/jobs")
-    .then((response) => response.json())
-    .then((data) => {
-      setLoad(false);
-    });
+  useEffect(() => {
+    fetch("https://project-udaan.herokuapp.com/api/jobs")
+      .then((response) => response.json())
+      .then((data) => {
+        setLoad(false);
+      });
+  }, [])
+
+  const [count, setCount] = useState(0);
 
   const navigate = useNavigate();
   useEffect(() => {
-    recognition.start();
-  }, [])
-
-  recognition.onend = () => {
-    recognition.start();
-  }
-
-  recognition.onresult = (event) => {
-    const command = event.results[0][0].transcript;
-
-    if(command.includes("navigate to") || command.includes("go to")) {
-      if(command.includes("home") || command.includes("index"))
-        navigate("/");
-      if (command.includes("jobs"))
-        navigate("/jobs");
-      if (command.includes("scholarships"))
-        navigate("/scholarships");
-      if (command.includes("heroes"))
-        navigate("/heroes");
-
+    if(!blind) {
+      try {
+        recognition.start();
+        setCount(1);
       }
-  };
+      catch {
+        recognition.stop();
+        setCount(0);
+      }
+    }
+    else {
+      recognition.stop();
+      setCount(0);
+    }
+  }, [sessVar])
 
-  console.log(recognition);
+  // if(blind) {
+    recognition.onend = () => {
+      if(count === 1)
+        recognition.start();
+      else
+        recognition.stop();
+    }
+  // }
+
+  // if(blind) {
+    recognition.onresult = (event) => {
+      const command = event.results[0][0].transcript;
+
+      if(command.includes("navigate to") || command.includes("go to")) {
+        if(command.includes("home") || command.includes("index"))
+          navigate("/");
+        if (command.includes("jobs"))
+          navigate("/jobs");
+        if (command.includes("scholarships"))
+          navigate("/scholarships");
+        if (command.includes("heroes"))
+          navigate("/heroes");
+      }
+      if(command.includes("stop")) {
+        recognition.stop();
+        setCount(0);
+      }
+    };
+  // }
+  
   return (
     <div className="body">
       {/* <Router> */}
         <Navbar />
-        {load ? <h3 style={{marginTop: 150}}>Loading...</h3> : 
+        {load ? <h3 style={{marginTop: 150}}>Loading...</h3> :
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path="/jobs" element={<Jobs />} />
