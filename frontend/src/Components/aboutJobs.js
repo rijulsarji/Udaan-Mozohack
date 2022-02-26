@@ -50,7 +50,7 @@ function AboutJobs() {
         opacity: 0,
       });
     }
-  });
+  }, [inView]);
 
   return (
     <div className="aboutJobsBody" ref={ref}>

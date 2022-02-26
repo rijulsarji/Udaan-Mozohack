@@ -49,7 +49,7 @@ function AboutUdaan() {
         opacity: 0,
       });
     }
-  });
+  }, [inView]);
 
   return (
     <div className="aboutUdaanBody" ref={ref}>

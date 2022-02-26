@@ -24,9 +24,10 @@ function Navbar() {
       <div className="leftNavbarSide"></div>
         <img src={udaanLogo} alt="udaan Logo" className="navbarUdaanLogo"/>
 
+      {/* blind assist toggle */}
       <div className="navbarToggle">
         <input type="checkbox" onChange={() => setToggle( !toggle )}/>
-        {toggle ? <p style={{color: "white"}}>On</p> : <p style={{color: "white"}}>Off</p>}
+        <span>For the visually impaired</span> 
       </div>
 
       {/* right side of navbar */}
@@ -36,7 +37,7 @@ function Navbar() {
           {/* <NavLink activeClassName="active" to="/" className="navbarLinks">About</NavLink> */}
           <NavLink activeClassName="active" to="/jobs" className="navbarLinks">Jobs</NavLink>
           <NavLink activeClassName="active" to="/scholarships" className="navbarLinks">Scholarships</NavLink>
-          <NavLink activeClassName="active" to="/heroes" className="navbarLinks">Heroes</NavLink>
+          <NavLink activeClassName="active" to="/" className="navbarLinks">Heroes</NavLink>
           {/* <NavLink activeClassName="active" to="/" className="navbarLinks">NGOs</NavLink> */}
         </div>
       </div>

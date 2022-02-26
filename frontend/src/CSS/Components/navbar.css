@@ -8,13 +8,51 @@
     flex-direction: row;
     justify-content: space-between;
     background-color: black;
-    z-index: 10
+    z-index: 10;
 }
 .navbarUdaanLogo {
     width: 13%;
     position: absolute;
     left: 10%;
 }
+
+.navbarToggle {
+    background-color: #FDD832;
+    font-size: 18px;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 15px;
+    margin-left: 200px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin-right: auto; */
+    /* position: relative; */
+}
+.navbarToggle input {
+    width: 20px;
+    height: 20px;
+}
+.navbarToggle input:active {
+    background-color: #FDD832;
+}
+/*.navbarToggle span {
+    position: absolute;
+    width: 25px;
+    height: 25x;
+    top: 0px;
+    left: 0px;
+    background-color: #eee;
+}
+.navbarToggle:hover input ~ span {
+    background-color: blue;
+} */
 
 .rightNavbarSide {
     width: 35%;
@@ -49,6 +87,20 @@
         width: 80px;
         left: 1%;
     }
+    .navbarToggle {
+        margin-top: 0px;
+        margin-left: 50px;
+        font-size: 11px;
+        padding: 5px;
+        gap: 5px;
+        position: absolute;
+        right: 0px;
+        top: 45px;
+    }
+    .navbarToggle input {
+        width: 15px;
+        height: 15px;
+    }    
     .rightNavbarSide {
         margin-right: 0px;
         width: 75%;

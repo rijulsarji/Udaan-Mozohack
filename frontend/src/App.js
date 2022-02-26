@@ -73,7 +73,7 @@ function App() {
         if (command.includes("scholarships"))
           navigate("/scholarships");
         if (command.includes("heroes"))
-          navigate("/heroes");
+          navigate("/");
       }
       if(command.includes("stop")) {
         recognition.stop();

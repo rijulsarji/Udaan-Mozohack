@@ -52,7 +52,7 @@ function AboutScholar() {
         opacity: 0,
       });
     }
-  });
+  }, [inView]);
 
   return (
     <div className="aboutScholarBody" ref={ref}>

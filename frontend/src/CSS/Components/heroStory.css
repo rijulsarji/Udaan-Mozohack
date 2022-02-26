@@ -1,0 +1,84 @@
+#HeroStory { height: 100% }
+
+.heroSwiperContainer {
+  position: relative;
+  height: 100%;
+  /* background: #eee; */
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 700px;
+  height: 400px;
+  /* background-color: #8282FF; */
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+/* 
+.content{
+    display: flex;
+    flex-direction: row;
+} */
+
+.swiper-slide img {
+  display: block;
+  height: 100%;
+  object-position: center;
+}
+/* 
+h2{
+    display: inline-block;
+} */
+.leftdiv{
+    width: 50%;
+}
+
+.leftdiv{
+    font-size: 15px;
+    text-align: center;
+}
+
+.leftdiv p{
+    text-align: justify;
+    padding: 10px;
+}
+
+.rightdiv{
+    width: 50%;
+}
+
+@media(max-width: 480px){
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    border-radius: 10px;
+  }  
+  .leftdiv{
+    width: 100%;
+  }
+  .leftdiv h2{
+    font-size: 22px;
+  }
+  .rightdiv{
+    width: 100%;
+  }
+}
