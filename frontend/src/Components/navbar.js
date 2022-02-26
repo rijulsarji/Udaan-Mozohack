@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../CSS/Components/navbar.css";
 
 // image import
 import udaanLogo from "../assets/udaanLogo.png";
 
 function Navbar() {
-
+  const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function Navbar() {
 
       {/* left side of navbar */}
       <div className="leftNavbarSide"></div>
-        <img src={udaanLogo} alt="udaan Logo" className="navbarUdaanLogo"/>
+        <img src={udaanLogo} alt="udaan Logo" className="navbarUdaanLogo" onClick={() => navigate("/")}/>
 
       {/* blind assist toggle */}
       <div className="navbarToggle">

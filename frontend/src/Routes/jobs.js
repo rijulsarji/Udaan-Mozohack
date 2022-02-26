@@ -63,11 +63,12 @@ function Jobs() {
               return data.post.toLowerCase().includes(search);
             })
             .map(
-              (data) => (
+              (data, idx) => (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="jobCardBody"
+                  key={data._id}
                 >
                   <h1>{data.post}</h1>
                   <h3>{data.govtOrg}</h3>
@@ -100,6 +101,17 @@ function Jobs() {
                       rel="noreferrer"
                     >
                       {data.website}
+                    </a>
+                  </p>
+                  <p>
+                    <span className="jobCardSubtitle">Skill Upgradation: </span>
+                    <a 
+                      href={data.skill}
+                      target="_blank"
+                      className="jobRedirects"
+                      rel="noreferrer"
+                    >
+                      {data.skill}
                     </a>
                   </p>
                 </motion.div>
