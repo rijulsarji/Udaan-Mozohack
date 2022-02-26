@@ -83,7 +83,7 @@ function AboutScholar() {
             options to fuel up your wings and prepare you for your highest
             flight.
           </p>
-          <Link to="/" className="aboutScholarGrab">
+          <Link to="/scholarships" className="aboutScholarGrab">
             <MdArrowLeft size={24} />
             <p ref={audioRef}>GRAB ONE</p>
           </Link>

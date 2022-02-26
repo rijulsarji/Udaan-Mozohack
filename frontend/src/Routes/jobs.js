@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 
 function Jobs() {
 
+  document.title = "Udaan | Find Jobs";
+
   const [apiData, setApiData] = useState([]);
   const [load, setLoad] = useState(true);
 

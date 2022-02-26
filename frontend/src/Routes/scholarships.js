@@ -7,6 +7,8 @@ import aboutScholarCap from "../assets/aboutScholarCap.png";
 
 function Scholarships() {
 
+  document.title = "Udaan | Find Scholarships";
+
   const [apiData, setApiData] = useState([]);
   const [load, setLoad] = useState(true);
 

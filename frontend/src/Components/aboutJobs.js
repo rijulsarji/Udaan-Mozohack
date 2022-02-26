@@ -64,7 +64,7 @@ function AboutJobs() {
             abilities, come explore the world of job opportunities with Udaan
             and give your career the start which you always wanted to.
           </p>
-          <Link to="/" className="aboutJobsDive">
+          <Link to="/jobs" className="aboutJobsDive">
             <p ref={audioRef}>DIVE IN</p>
             <MdArrowRight size={24} />
           </Link>

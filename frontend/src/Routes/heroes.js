@@ -9,18 +9,25 @@ import HeroStory from "../Components/heroStory";
 import HeroCard from "../Components/heroCard";
 
 function Heroes() {
-    
-    return(
-        <>  
-        <div className="heroBody">
+  document.title = "Udaan | Our Heroes";
+
+  return (
+    <>
+      <div className="heroBody">
         <h1 className="heroCardHeading">Mission passed, Respect++</h1>
-        <h4 className="heroCardDescription">Not one, not two, not three. We have multiple heroes and they have never failed to inspire us.</h4>
+        <h4 className="heroCardDescription">
+          Not one, not two, not three. We have multiple heroes and they have
+          never failed to inspire us.
+        </h4>
         <HeroCard />
-        <h2 className="heroStoryHeading">Our heroes made their flight <span className="highlight">without wings!</span></h2>
+        <h2 className="heroStoryHeading">
+          Our heroes made their flight{" "}
+          <span className="highlight">without wings!</span>
+        </h2>
         <HeroStory />
-        </div>
-        </>
-    )
+      </div>
+    </>
+  );
 }
 
 export default Heroes;

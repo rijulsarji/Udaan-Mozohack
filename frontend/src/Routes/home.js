@@ -18,6 +18,8 @@ import Footer from "../Components/footer";
 
 function Home() {
 
+  document.title = "Udaan";
+
   const [sessVar, setSessVar] = useState(false);
   const [blind, setBlind] = useState(false);
   setInterval(() => {
