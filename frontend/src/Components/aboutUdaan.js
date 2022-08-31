@@ -7,7 +7,6 @@ import { useInView } from "react-intersection-observer";
 
 import aboutUdaan from "../assets/aboutPage.aac"
 
-import {Howl, Howler} from "howler";
 import ReactHowler from "react-howler";
 
 function AboutUdaan() {

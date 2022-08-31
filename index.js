@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const http = require("http")
 
 app.use(express.json())
 dotenv.config({ path: "./config.env" })
@@ -36,7 +35,6 @@ mongoose
 // making api routes
 
 const { Scholarships, Jobs, Heroes, NGOs } = require("./udaanSchema");
-const e = require("express");
 
 app.get("/", (req, res) => {
   res.send("Navigate to api/scholarships");
