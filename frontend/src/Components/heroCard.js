@@ -5,7 +5,7 @@ function HeroCard() {
   const [dataApi, setDataApi] = useState([]);
   const [load, setLoad] = useState(true);
 
-  fetch("https://project-udaan.herokuapp.com/api/heroes")
+  fetch("https://project-udaan-backend.onrender.com/api/heroes")
     .then((response) => response.json())
     .then((data) => {
       setDataApi(data);

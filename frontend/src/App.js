@@ -25,7 +25,7 @@ function App() {
 
   const [load, setLoad] = useState(true);
   useEffect(() => {
-    fetch("https://project-udaan.herokuapp.com/api/jobs")
+    fetch("https://project-udaan-backend.onrender.com/api/jobs")
       .then((response) => response.json())
       .then((data) => {
         setLoad(false);

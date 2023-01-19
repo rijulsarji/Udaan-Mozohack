@@ -13,12 +13,12 @@ function NGOsection() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    fetch("http://project-udaan.herokuapp.com/api/ngos")
-      .then(response => response.json())
-      .then(data => {
-        setApiData(data)
-        setLoad(false)
-      })
+    fetch("https://project-udaan-backend.onrender.com/api/ngos")
+      .then((response) => response.json())
+      .then((data) => {
+        setApiData(data);
+        setLoad(false);
+      });
   }, [])
 
   // install Swiper modules

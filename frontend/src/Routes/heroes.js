@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 
-// eslint-disable-next-line
 import "swiper/css/bundle";
 import "../CSS/Routes/hero.css";
 // import "./styles.css";
