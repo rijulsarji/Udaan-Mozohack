@@ -21,9 +21,6 @@ function Scholarships() {
       });
   }, [])
 
-  if(!load)
-    console.log(apiData);
-
   // search box functionality
   const [search, updateSearch] = useState("");
 
