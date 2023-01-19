@@ -6,7 +6,7 @@ function HeroPage() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    fetch("http://project-udaan.herokuapp.com/api/heroes")
+    fetch("https://project-udaan-backend.onrender.com/api/heroes")
       .then((response) => response.json())
       .then((data) => {
         setDataApi(data);

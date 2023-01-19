@@ -11,7 +11,7 @@ function Jobs() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    fetch("http://project-udaan.herokuapp.com/api/jobs")
+    fetch("https://project-udaan-backend.onrender.com/api/jobs")
       .then((response) => response.json())
       .then((data) => {
         setApiData(data);

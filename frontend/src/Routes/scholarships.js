@@ -13,7 +13,7 @@ function Scholarships() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
-    fetch("http://project-udaan.herokuapp.com/api/scholarships")
+    fetch("https://project-udaan-backend.onrender.com/api/scholarships")
       .then((response) => response.json())
       .then((data) => {
         setApiData(data);
